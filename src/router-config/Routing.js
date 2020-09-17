@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Home, Search, GenereteBudget, Budgets, Profile } from './LazyImport'
-import TabBar from './Tab-bar'
+import TabBar from './../shared/components/TabBar/TabBar'
 const Tab = createBottomTabNavigator();
 const HomeStack = createStackNavigator();
 const SearchStack = createStackNavigator();
@@ -61,7 +61,7 @@ const ProfileStackScreen = () => {
 const MyTheme = {
     dark: false,
     colors: {
-        background: '#D0D8E2',
+        background: '#2E55A0',
     },
 };
 const Routing = () => {

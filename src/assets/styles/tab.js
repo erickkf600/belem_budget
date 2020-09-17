@@ -21,7 +21,7 @@ export const TabItem = styled.View`
     color: #4365A9;
 `;
 
-export const styles = StyleSheet.create({
+export const styless = StyleSheet.create({
     item: {
         width: wp('30%'),
         height: 50,
@@ -32,6 +32,7 @@ export const styles = StyleSheet.create({
     add:{
         width: 45,
         height: 40,
+        marginTop: -20,
         backgroundColor: '#2E55A0' 
     }
 });
@@ -62,7 +63,6 @@ export const icon = StyleSheet.create({
         textAlign: 'center',
         textAlignVertical: 'center',
         borderRadius: 15,
-        marginTop: -20,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
