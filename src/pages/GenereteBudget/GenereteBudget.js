@@ -1,10 +1,16 @@
 import React from 'react'
-import { Text, View } from 'react-native';
+import { Container } from './generete-budget.style'
+import { TextInput } from 'react-native-paper'
 function GenereteBudget() {
     return (
-        <View style={{flex: 1, alignItems:'center', justifyContent: 'center'}}>
-            <Text style={{ fontSize: 35 }}>Adicionar Orçamento</Text>
-        </View>
+        <Container>
+            <TextInput
+                label="Email"
+                type="outlined"
+                style={{backgroundColor: '#fff'}}
+                onChangeText={text => {}}
+            />
+        </Container>
     )
 }
 

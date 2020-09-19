@@ -1,12 +1,13 @@
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ScrollView, Text, View  } from 'react-native'
+import { Container } from './search.style'
 
 function Search() {
     return (
-        <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+        <Container>
             <Text style={{ fontSize: 35 }}>Search</Text>
-        </View>
+        </Container>
     )
 }
 
