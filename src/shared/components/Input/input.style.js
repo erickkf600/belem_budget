@@ -1,16 +1,6 @@
 import styled from 'styled-components/native'
 
 
-//STYLED COMPONENTS
-export const Container = styled.ScrollView`
-    flex: 1;
-    background: #D0D8E2;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    padding: 20px;
-`;
-
-
 export const FormInput = styled.View`
     margin-top: 15px;
 `;
@@ -26,7 +16,6 @@ export const Label = styled.Text`
 export const Input = styled.TextInput`
    background: #fff;
     border: 1px;
-    /* border-color: #ccc; */
    border-radius: 5px;
    padding: 10px;
 `;

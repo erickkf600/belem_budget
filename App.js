@@ -2,14 +2,16 @@
 import React, { Component } from 'react'
 import { StatusBar } from 'react-native';
 import Routing from './src/router-config/Routing'
-import { Provider as PaperProvider } from 'react-native-paper';
+
+import { Provider as ReduxProvider } from "react-redux"
+import store from './src/store/store'
 class App extends Component {
   render() {
     return (
-      <PaperProvider>
+      <ReduxProvider store={store}>
         <StatusBar barStyle="light-content" backgroundColor='#2E55A0' currentHeight="100px"/>
             <Routing />
-      </PaperProvider>  
+      </ReduxProvider>  
     )
   }
 }
