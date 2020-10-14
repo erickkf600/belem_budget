@@ -5,10 +5,9 @@ import * as actions from './input.actions'
 import { connect } from 'react-redux'
 import { Text, Button } from "react-native";
 
-const InputDefault = ({types, border, colors, isFocused, error }) =>{
+const InputDefault = ({ types, border, colors, isFocused, error, validate }) =>{
     const { control, handleSubmit, errors } = useForm();
     const onSubmit = () => errors;
-    console.log(types)
     return (
         <FormInput>
             <Label>{types.label}</Label>
@@ -27,13 +26,8 @@ const InputDefault = ({types, border, colors, isFocused, error }) =>{
                 rules={{ required: types.required }}
                 defaultValue=""
             />
-            {/* {errors.cliente && errors.cliente.type === "required" ? 
-                <Error>Este campo é obrigatório.</Error>
-                : 
-                null
-            } */}
-            {/* {errors.client && <Error>Este campo é obrigatório.</Error>} */}
-            {/* <Button title="Submit" onPress={handleSubmit(onSubmit)} /> */}
+            {/* {errors.cliente && errors.cliente.type === "required" && <Error> Este campo é obrigatório.</Error>} */}
+            {errors.cliente && <Error>Este campo é obrigatório.</Error>}
         </FormInput>
     )
 }

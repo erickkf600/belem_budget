@@ -1,5 +1,5 @@
 import styled from 'styled-components/native'
-
+import { StyleSheet } from 'react-native'
 
 //STYLED COMPONENTS
 export const Container = styled.ScrollView`
@@ -36,3 +36,15 @@ export const Error = styled.Text`
    font-weight: bold;
    font-family: Rubik;
 `;
+
+
+export const nativeStyles = StyleSheet.create({
+    button:{
+        padding: 0, 
+        backgroundColor: '#2E55A0',
+        width: 100
+    },
+    buttonText:{
+        color: '#fff'
+    }
+})

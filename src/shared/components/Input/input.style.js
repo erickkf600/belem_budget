@@ -21,7 +21,7 @@ export const Input = styled.TextInput`
 `;
 export const Error = styled.Text`
    color: #f00;
-   font-size: 14px;
+   font-size: 12px;
    font-weight: bold;
    font-family: Rubik;
 `;
