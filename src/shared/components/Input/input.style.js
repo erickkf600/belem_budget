@@ -13,11 +13,12 @@ export const Label = styled.Text`
     color: #949494;
     margin-bottom: 5px;
 `;
-export const Input = styled.TextInput`
+export const InputDefault = styled.TextInput`
    background: #fff;
-    border: 1px;
+   border: 1px;
    border-radius: 5px;
    padding: 10px;
+   min-width: 85%;
 `;
 export const Error = styled.Text`
    color: #f00;

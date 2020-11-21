@@ -1,11 +1,13 @@
 import React from 'react'
-import { Container, HomeHeader, Body, Top, H1, H2, P, Button, Img, Card, CardIcon, CardContent, CardFooter } from './home.styles'
+import { Container, HomeHeader, Body, Top, H1, H2, P, Button, Div, Img, Card, CardIcon, CardContent, CardFooter } from './home.styles'
 import { CustomIcon } from './../../assets/Icons/Icons'
 function Home(props) {
     return (
             <Container>
             <HomeHeader>
-                <Img source={require('../../assets/img/logo.png')}></Img>
+                <Div>
+                    <Img source={require('../../assets/img/logo.png')}></Img>
+                </Div>
                 <H1>50</H1>
                 <P style={{ fontSize: 15, color: '#9CADD2'}}>Orçamentos Gerados</P>
             </HomeHeader>

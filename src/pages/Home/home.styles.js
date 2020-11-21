@@ -7,11 +7,15 @@ export const Container = styled.View`
     flex: 1;
 
 `;
-export const Img = styled.Image`
+export const Div = styled.View`
+    width: 65%;
+    height: 65px;
     display: flex;
-    margin: 20px 0 auto auto;
-    width: 50%;
-    height: 35px;
+    margin: 10px 0 0 auto;
+`;
+export const Img = styled.Image`
+    width: 100%;
+    resize-mode: contain;
 `;
 export const HomeHeader = styled.View`
     background: #2E55A0;
@@ -27,7 +31,6 @@ export const Top = styled.View`
 export const H1 = styled.Text`
     font-size: 30px;
     color: #fff;
-    margin-top: 20px;
     font-family: Rubik;
     font-weight: bold;
 `;

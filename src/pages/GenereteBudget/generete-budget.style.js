@@ -8,43 +8,51 @@ export const Container = styled.ScrollView`
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
     padding: 20px;
+    min-height: 100%;
+`;
+export const Form = styled.View`
+    margin: 40px 0 40px 0;
 `;
 
 
-export const FormInput = styled.View`
-    margin-top: 15px;
-`;
-export const Label = styled.Text`
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 10px;
-    font-family: Rubik;
-    letter-spacing: 1.2px;
-    color: #949494;
-    margin-bottom: 5px;
-`;
-export const Input = styled.TextInput`
-   background: #fff;
-    border: 1px;
-    /* border-color: #ccc; */
-   border-radius: 5px;
-   padding: 10px;
-`;
-export const Error = styled.Text`
-   color: #f00;
-   font-size: 14px;
-   font-weight: bold;
-   font-family: Rubik;
+
+export const DinamycInputControl = styled.View`
+    display: flex;
+    /* margin: 4px 0 4px 0; */
+    flex: 1;
+    flex-direction: row;
+    align-items: center;
+   
 `;
 
+export const Actions = styled.View`
+   margin: 20px 0 0 16px;
+`;
+export const Dinamyc = styled.TouchableWithoutFeedback`
+    margin: 20px 0 16px 0;
+    align-items: center;
+    background: #2E55A0;
+`;
 
-export const nativeStyles = StyleSheet.create({
-    button:{
-        padding: 0, 
-        backgroundColor: '#2E55A0',
-        width: 100
+export const nativeStyle = StyleSheet.create({
+    icons:{
+        color: '#2E55A0',
+        fontSize: 20,
+        marginBottom: 10,
+    }
+})
+export const stepperStyles = StyleSheet.create({
+    wrraperButtonStyle:{
+        display: 'flex',
+        flex: 1,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
     },
-    buttonText:{
-        color: '#fff'
+    stepStyle:{
+        backgroundColor: '#2E55A0',
+    },
+    buttonStyle:{
+        backgroundColor: '#2E55A0',
+        alignSelf: 'stretch'
     }
 })

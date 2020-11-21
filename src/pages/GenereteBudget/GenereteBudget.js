@@ -1,61 +1,28 @@
-import React from 'react'
-import { Container, nativeStyles } from './generete-budget.style'
-import InputDefault from  './../../shared/components/Input/Input'
+import React, { useState } from "react"
+import { Container, stepperStyles } from './generete-budget.style'
 import { connect } from 'react-redux'
-
+import Stepper from "react-native-stepper-ui"
 import * as actions from './generate-budget.actions'
-import { ProgressSteps, ProgressStep } from 'react-native-progress-steps';
+import { CustomIcon } from './../../../src/assets/Icons/CustomIcon'
 function GenereteBudget({submit}) {
-    function clickAlert() {
-        alert("I am working")
-    } 
+    const [active, setActive] = useState(0)
     return (
         <Container>
-            <ProgressSteps 
-                activeStepIconBorderColor="transparent" 
-                activeStepIconColor="#2E55A0" 
-                activeStepNumColor="#fff"
-                disabledStepNumColor="#2E55A0"
-                completedProgressBarColor="#2E55A0"
-                completedStepIconColor="#2E55A0"
-                completedLabelColor="#2E55A0" >
-                <ProgressStep
-                    nextBtnText="Continuar"
-                    nextBtnTextStyle={nativeStyles.buttonText}
-                    nextBtnStyle={nativeStyles.button}>
-                    <InputDefault
-                        validate={clickAlert}
-                        types={{
-                            required: true,
-                            label: 'Cliente',
-                            name: 'cliente'
-                        }} />
-                </ProgressStep>
-                <ProgressStep
-                    nextBtnText="Continuar"
-                    previousBtnText="Voltar">
-                    <InputDefault
-                        validate={clickAlert}
-                        types={{
-                            required: true,
-                            label: 'Materiais',
-                            name: 'materiais'
-                        }} />
-                </ProgressStep>
-                <ProgressStep
-                    nextBtnText="Continuar"
-                    previousBtnText="Voltar"
-                    finishBtnText="Finalizar">
-                    <InputDefault
-                        validate={clickAlert}
-                        types={{
-                            required: true,
-                            label: 'Valor',
-                            name: 'valor'
-                        }} />
-                </ProgressStep>
-            </ProgressSteps>
-            {/* <Button title="Submit" onPress={() => clickAlert()} /> */}
+            {/* <CustomIcon name="home" size={27} style={props.state.index === 0 ? icon.active : icon.inactive} /> */}
+            <Stepper
+                active={active}
+                stepStyle={stepperStyles.stepStyle}
+                buttonStyle={stepperStyles.buttonStyle}
+                wrapperButtonStyle={stepperStyles.wrraperButtonStyle}
+                content={actions.content}
+                prevButtonText="Voltar"
+                nextButtonText="Proximo"
+                finishButtonText="Enviar"
+                onBack={() => setActive(p => p - 1)}
+                onFinish={() => alert("Finish")}
+                onNext={() => setActive(p => p + 1)}
+            />
+            {/* <Button title="Submit" onPress={() => {}} /> */}
         </Container>
     )
 }
