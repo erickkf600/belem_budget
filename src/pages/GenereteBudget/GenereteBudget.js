@@ -15,12 +15,12 @@ function GenereteBudget({submit}) {
                 buttonStyle={stepperStyles.buttonStyle}
                 wrapperButtonStyle={stepperStyles.wrraperButtonStyle}
                 content={actions.content}
-                prevButtonText="Voltar"
-                nextButtonText="Proximo"
-                finishButtonText="Enviar"
-                onBack={() => setActive(p => p - 1)}
-                onFinish={() => alert("Finish")}
-                onNext={() => setActive(p => p + 1)}
+                // prevButtonText="Voltar"
+                // nextButtonText="Proximo"
+                // finishButtonText="Enviar"
+                // onBack={() => setActive(p => p - 1)}
+                // onFinish={() => alert("Finish")}
+                // onNext={() => actions.next()}
             />
             {/* <Button title="Submit" onPress={() => {}} /> */}
         </Container>

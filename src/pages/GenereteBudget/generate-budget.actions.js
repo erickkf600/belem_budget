@@ -17,7 +17,6 @@ export const content = [
 ]
 
 
-
 //FUNÇÃO DO BOTÃO obs:o metodo do click tem ter o mesmo nome da função do action
 export const mapDispatchToProps = dispatch =>
     bindActionCreators(Submit, dispatch)

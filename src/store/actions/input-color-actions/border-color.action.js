@@ -1,7 +1,8 @@
 
-export function isFocused(color) {
+export function isFocused(color, name) {
     return {
-        type: "CHANGE_BORDER_COLOR",
-        color
+        type: `CHANGE_BORDER_COLOR`,
+        color,
+        name
     }
 }

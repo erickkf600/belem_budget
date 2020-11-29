@@ -1,6 +1,5 @@
 import React from 'react'
 import { FormInput, InputDefault, Label, Error } from './input.style'
-import { useForm, Controller } from "react-hook-form"
 import * as actions from './input.actions'
 import { connect } from 'react-redux'
 import { Text, Button, View } from "react-native";
@@ -10,12 +9,13 @@ const Input = ({ types, border, isFocused, changeText, inputStyles }) =>{
         <View>
             <Label>{types.label}</Label>
             <InputDefault
-                onBlur={() => isFocused('#ccc')}
-                onFocus={() => isFocused('#4365A9')}
+                onBlur={() => isFocused('#ccc', types.name)}
+                onFocus={() => isFocused('#4365A9', types.name)}
                 onChangeText={text => changeText(text) }
                 placeholder={types.placeholder}
                 style={[{ borderColor: border }, inputStyles]}
             />
+            {/* <Text>{types.required && !value ? 'Obrigatorio' : null}</Text> */}
         </View>
     )
 }
