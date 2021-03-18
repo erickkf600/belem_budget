@@ -1,4 +1,6 @@
-<img src="./src/assets/img/logo.png" width="35%" alt="logo">
+<p align="center">
+  <img src="./src/assets/img/logo.png" width="35%" alt="logo" align="center">
+</p>
 
 <hr>
 
@@ -9,10 +11,11 @@
 
 Desenvolvimento de uma aplicação para gerar orçamentos, armazenar e exportar como PDF.
 
-
-<img src="https://i.imgur.com/hCHh1PI.jpg" width="40%" alt="Prevew">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="https://i.imgur.com/h5l0hfp.jpg" width="40%" alt="Prevew">
+<p float="left" align="center">
+   <img src="https://i.imgur.com/hCHh1PI.jpg" width="40%" alt="Prevew">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <img src="https://i.imgur.com/h5l0hfp.jpg" width="40%" alt="Prevew">
+</p>
 
 
 ### Ajustes e melhorias
