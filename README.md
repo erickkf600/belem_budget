@@ -7,7 +7,7 @@
 ## Aplicação desenvolvida com React Native v0.63.1 e React 16.13.1
 <br>
 
-![GitHub repo size](https://img.shields.io/github/repo-size/erickkf600/belem_budget?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/erickkf600/belem_budget_mobile?style=for-the-badge)
 
 Desenvolvimento de uma aplicação para gerar orçamentos, armazenar e exportar como PDF.
 
