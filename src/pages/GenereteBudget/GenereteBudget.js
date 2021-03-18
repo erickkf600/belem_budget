@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import Stepper from "react-native-stepper-ui"
 import * as actions from './generate-budget.actions'
 import { CustomIcon } from './../../../src/assets/Icons/CustomIcon'
-function GenereteBudget({submit}) {
+function GenereteBudget() {
     const [active, setActive] = useState(0)
     return (
         <Container>
@@ -12,15 +12,15 @@ function GenereteBudget({submit}) {
             <Stepper
                 active={active}
                 stepStyle={stepperStyles.stepStyle}
-                buttonStyle={stepperStyles.buttonStyle}
-                wrapperButtonStyle={stepperStyles.wrraperButtonStyle}
                 content={actions.content}
+                // buttonStyle={stepperStyles.buttonStyle}
+                // wrapperButtonStyle={stepperStyles.wrraperButtonStyle}
                 // prevButtonText="Voltar"
                 // nextButtonText="Proximo"
                 // finishButtonText="Enviar"
                 // onBack={() => setActive(p => p - 1)}
                 // onFinish={() => alert("Finish")}
-                // onNext={() => actions.next()}
+                // onNext={() => actions.nextStep(active, setActive)}
             />
             {/* <Button title="Submit" onPress={() => {}} /> */}
         </Container>

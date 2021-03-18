@@ -1,17 +1,17 @@
-
-export var submit = false 
-export const formBuilderClient = {
-    nomeCliente:'',
-    cidadeCliente: '',
-    telefoneCliente: '',
+export let formBuilderClient = {
+    nomeCliente: {value: '', required: true},
+    cidadeCliente: {value: '', required: true},
+    telefoneCliente: {value: '', required: false},
+    valid: false
 
 }
 
 
-export const nextStep = () =>{ 
-    if(!formBuilderClient){
-        setSubmit = true
-        alert('erro')
+export const nextStep = (next, setSubmit) =>{ 
+    setSubmit(true)
+    if(formBuilderClient.valid === true || formBuilderClient.valid === undefined){
+        next(formBuilderClient)
     }
-    console.log(submit)
+    
 }
+ 

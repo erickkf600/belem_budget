@@ -1,46 +1,57 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Text, View, Button, TouchableOpacity } from 'react-native'
 import Input from './../../../shared/components/Input'
 import { Form } from './../generete-budget.style'
 import * as actions from './index.actions'
-function stepOne() {
-    const formControlName = (control, input) =>{ return actions.formBuilderClient[control] = input }
+const stepOne = ({next})  =>{
+    const formControlName = (control, input, valid) =>{ 
+        actions.formBuilderClient[control].value = input 
+        actions.formBuilderClient.valid = valid 
+    }
+    const [submit, setSubmit] = useState(false)
+    const [valid, setValid] = useState(false)
     return (
         <Form>
             <Input 
                 inputStyles={{marginBottom: 15}}
-                changeText = {(value) => formControlName('nomeCliente', value)}
+                changeText = {(value) => formControlName('nomeCliente', value, valid)}
+                check = {bool => setValid(bool)}
                 types={{
-                    valid: actions.submit,
+                    submit: submit,
                     placeholder: '',
-                    required: true,
+                    type: 'default',
+                    required: actions.formBuilderClient['nomeCliente'].required,
                     label:'Cliente',
-                    name: 'client',
+                    name: 'nomeCliente',
                 }}
             />
             <Input
                 inputStyles={{marginBottom: 15}}
                 changeText = {(value) => formControlName('cidadeCliente', value)}
+                check = {bool => setValid(bool)}
                 types={{
-                    valid: actions.submit,
+                    submit: submit,
                     placeholder: '',
-                    required: true,
+                    type: 'default',
+                    required: actions.formBuilderClient['cidadeCliente'].required,
                     label: 'Cidade',
-                    name: 'city'
+                    name: 'cidadeCliente'
                 }}
             />
             <Input
                 inputStyles={{marginBottom: 15}}
                 changeText = {(value) => formControlName('telefoneCliente', value)}
+                check = {bool => setValid(bool)}
                 types={{
-                    valid: actions.submit,
+                    submit: submit,
+                    type: 'numeric',
                     placeholder: '',
-                    required: false,
+                    required: actions.formBuilderClient['telefoneCliente'].required,
                     label: 'telefone',
-                    name: 'tel'
+                    name: 'telefoneCliente'
                 }}
             />
-            <Button title="Proximo" onPress={() => actions.nextStep()} />      
+            <Button title="Proximo"  onPress={() => actions.nextStep(next, setSubmit)} />      
         </Form>
     )   
 }
