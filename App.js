@@ -9,8 +9,8 @@ class App extends Component {
   render() {
     return (
       <ReduxProvider store={store}>
-        <StatusBar barStyle="light-content" backgroundColor='#2E55A0' currentHeight="100px"/>
-            <Routing />
+        <StatusBar translucent backgroundColor="transparent"/>
+        <Routing />
       </ReduxProvider>  
     )
   }
