@@ -9,12 +9,18 @@ export const mapStateToProps = state => ({
     border: state.bordercolor.color,
     colors: state.colors.colors
 })
+// const formControlClient = obj
 
 export const content = [
-    <StepOne title="Component 1" />,
+    <StepOne title="Component 1" next={obj => nextStep(obj)}/>,
     <StepTwo title="Component 2" />,
     <StepThree title="Component 3" />
 ]
+
+export const nextStep = (obj) =>{
+    console.log(obj)
+}
+
 
 
 

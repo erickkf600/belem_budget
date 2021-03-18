@@ -22,7 +22,8 @@ export const InputDefault = styled.TextInput`
 `;
 export const Error = styled.Text`
    color: #f00;
-   font-size: 12px;
+   font-size: 10px;
    font-weight: bold;
    font-family: Rubik;
+   margin-top: -15px;
 `;

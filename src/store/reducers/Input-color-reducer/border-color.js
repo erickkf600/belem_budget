@@ -3,7 +3,7 @@ const BORDER_COLOR = {
 }
 
 export default function bordercolor(state = BORDER_COLOR, action) {
-    if (action.type === 'CHANGE_BORDER_COLOR'){
+    if (action.type === `CHANGE_BORDER_COLOR`){
         return{
             ...state,
             color: action.color

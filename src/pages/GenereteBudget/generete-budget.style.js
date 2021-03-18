@@ -28,6 +28,7 @@ export const DinamycInputControl = styled.View`
 export const Actions = styled.View`
    margin: 20px 0 0 16px;
 `;
+
 export const Dinamyc = styled.TouchableWithoutFeedback`
     margin: 20px 0 16px 0;
     align-items: center;
